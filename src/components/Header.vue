@@ -1,9 +1,9 @@
 <template>
   <header class="header">
-    <router-link class="header__section header__section--left" to="/">
+    <router-link class="section section--left" to="/">
       <img src="@/assets/logo.svg" alt="logo" class="logo">
     </router-link>
-    <div class="header__section header__section--right">
+    <div class="section section--right">
       <router-link class="login" to="/login">Login</router-link>
       <router-link class="register" to="/register">Register</router-link>
     </div>
@@ -16,22 +16,32 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.header {
+<style lang="scss" scoped>
+header {
   padding: 8px 24px;
 
-  &, &__section--right {
+  &, .section--right {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
-  &__logo {
+  .logo {
     width: 48px;
     height: 48px;
+  }
 
-    img {
-      width: 100%;
+  .section--right {
+    a {
+      font-weight: bold;
+    }
+
+    .register {
+      border-radius: 12px;
+      border: 3px solid $secondary-color;
+      color: $secondary-color;
+      padding: 12px;
+      margin-left: 24px;
     }
   }
 }

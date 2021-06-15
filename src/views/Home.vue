@@ -1,31 +1,30 @@
 <template>
-  <div class="home section-padding">
-    <IllustrationSection
-      title="Looking for project based gigs?"
-      text="Fill up your profile and you’re ready. Find a project that you like and apply.
-        People post all kinds of projects, paid or not, remote or location based, so you’ll
-        probably find something nice here!"
-      buttonText="Find Projects"
-      imageName="illustration-1.svg"
-    />
-    <IllustrationSection
-      title="Need to find people for the project?"
-      text="Create a project, fill up all the fields and wait for users to apply
-        or you can let them know that you find them suitable for the job!"
-      buttonText="Find People"
-      imageName="illustration-2.svg"
-    />
+  <div class="home">
+    <IllustrationSection :data="illustrationSectionData"/>
+    <IconSection :data="iconSectionData"/>
   </div>
 </template>
 
 <script>
-
-import IllustrationSection from '@/components/IllustrationSection.vue';
+import IllustrationSection from '@/components/Home/IllustrationSection/IllustrationSection.vue';
+import IconSection from '@/components/Home/IconSection/IconSection.vue';
+import { content } from '@/helpers/data';
 
 export default {
   name: 'Home',
   components: {
     IllustrationSection,
+    IconSection,
+  },
+  data() {
+    const {
+      illustrationSection: illustrationSectionData,
+      iconSection: iconSectionData,
+    } = content.home;
+    return {
+      illustrationSectionData,
+      iconSectionData,
+    };
   },
 };
 </script>

@@ -1,21 +1,18 @@
 <template>
   <section>
-    <img :src="require('@/assets/' + imageName + '')"
-         alt="title">
-    <h1>{{ title }}</h1>
-    <p>{{ text }}</p>
-    <router-link to="/register" class="button button--main">{{ buttonText }}</router-link>
+    <img :src="require('@/assets/' + data.imageName + '')"
+         :alt="data.title">
+    <h1>{{ data.title }}</h1>
+    <p>{{ data.text }}</p>
+    <router-link to="/register" class="button button--main">{{ data.buttonText }}</router-link>
   </section>
 </template>
 
 <script>
 export default {
-  name: 'IllustrationSection',
+  name: 'Illustration',
   props: {
-    title: String,
-    text: String,
-    buttonText: String,
-    imageName: String,
+    data: Object,
   },
 };
 </script>

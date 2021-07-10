@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header section-padding">
     <router-link class="section section--left" to="/">
       <img src="@/assets/logo.svg" alt="logo" class="logo">
     </router-link>
@@ -18,7 +18,8 @@ export default {
 
 <style lang="scss" scoped>
 header {
-  padding: 8px 24px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   &, .section--right {
     display: flex;

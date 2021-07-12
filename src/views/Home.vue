@@ -1,7 +1,7 @@
 <template>
   <div class="home">
-    <IllustrationSection :data="illustrationSectionData"/>
-    <IconSection :data="iconSectionData"/>
+    <illustration-section :data="illustrationSectionData"/>
+    <icon-section :data="iconSectionData"/>
   </div>
 </template>
 

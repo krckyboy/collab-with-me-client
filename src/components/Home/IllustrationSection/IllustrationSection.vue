@@ -1,9 +1,9 @@
 <template>
   <section class="section-padding">
-    <Illustration
+    <illustration
       :data="data.first"
     />
-    <Illustration
+    <illustration
       :data="data.second"
     />
   </section>
